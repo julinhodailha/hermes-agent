@@ -110,8 +110,12 @@ export function memoryInkFor(primary: Rgb, bg: Rgb): Rgb {
 // groups borrow restrained tint from the theme; structure stays foreground ink.
 export function computePalette(canvas: HTMLCanvasElement): Palette {
   const style = getComputedStyle(canvas)
-  const fg = resolveRgb(style.color)
-  const darkTheme = luminance(fg.r, fg.g, fg.b) > 0.55
+  // Dark mode is a DOM state set by applyTheme() (themes/context.tsx), not a
+  // color inference. The canvas's computed `color` can resolve to a dark ink via
+  // color-mix()/oklch tokens that resolveRgb mis-reads, which flips a dark theme
+  // to "light" and paints foreground ink black on the black background. Read the
+  // canonical flag instead of guessing from the foreground luminance.
+  const darkTheme = document.documentElement.classList.contains('dark')
   const base: Rgb = darkTheme ? { b: 255, g: 255, r: 255 } : { b: 0, g: 0, r: 0 }
   const primary = resolveRgb(style.getPropertyValue('--theme-primary').trim() || style.color)
 
