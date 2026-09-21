@@ -445,3 +445,16 @@ Long-form background lives in `website/docs/developer-guide/` (agent-loop, promp
 context-compression-and-caching, gateway-internals, tools-runtime, plugins/, cron-internals,
 session-storage, ...). Workflow rules (PR/issue/review/salvage process) live in the
 `hermes-agent-dev` skill, not here.
+
+---
+
+## Convenções do fork (julinhodailha)
+
+Adicionadas em 2026-09-02 — regras específicas deste fork (não alteram o guia de dev acima):
+
+1. **Prove antes de "pronto"** — nunca reportar tarefa completa por intenção; produzir evidência real (teste, log, leitura de volta).
+2. **Planeje antes de mudança complexa** e **grille antes de entregar**.
+3. **Segredos em `.env`, settings em `config.yaml`**; nunca editar config.yaml à mão (use `hermes config set`).
+4. **Commits** em Conventional Commits; mensagem resume a intenção.
+5. **Idioma**: responder ao usuário em pt-BR.
+6. **Compounding**: adicionar aqui gotchas conforme surgirem.
