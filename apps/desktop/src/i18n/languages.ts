@@ -109,7 +109,7 @@ const LOCALE_ALIASES: Record<string, Locale> = {
   'pt-pt': 'pt',
   pt_pt: 'pt',
   portuguese: 'pt',
-  'português': 'pt',
+  português: 'pt',
   portugues: 'pt',
   brasileiro: 'pt'
 }

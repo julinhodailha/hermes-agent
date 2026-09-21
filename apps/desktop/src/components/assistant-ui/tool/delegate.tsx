@@ -153,6 +153,7 @@ function DelegateRowView({ row, index }: { row: DelegateRow; index: number }) {
       {/* Resize handles. */}
       {RESIZE_HANDLES.map(([dir, cls]) => {
         const r = floating.resize(dir)
+
         return (
           <div
             className={cls}

@@ -182,12 +182,13 @@ export const pt: Translations = {
       startingHermesDesktop: 'Iniciando o Hermes Desktop…'
     },
     errors: {
-      backgroundExited: 'O serviço que executa seus chats fechou inesperadamente. Reinicie-o para continuar — seus chats e configurações estão seguros.',
+      backgroundExited:
+        'O serviço que executa seus chats fechou inesperadamente. Reinicie-o para continuar — seus chats e configurações estão seguros.',
       backgroundExitedDuringStartup: 'O Hermes parou logo depois de iniciar.',
       backendStopped: 'O Hermes parou de funcionar em segundo plano',
       restartHermes: 'Reiniciar o Hermes',
       openLogs: 'Abrir logs',
-      desktopBootFailed: "O Hermes não pôde iniciar",
+      desktopBootFailed: 'O Hermes não pôde iniciar',
       gatewayConnectionLost: 'O Hermes perdeu a conexão',
       gatewayConnectionLostDetail:
         'Ainda tentando reconectar. Você pode continuar lendo e escrevendo rascunhos. Se isso continuar, reconecte agora ou verifique suas configurações de conexão.',
@@ -196,22 +197,22 @@ export const pt: Translations = {
       gatewaySignInRequired: 'Seu Hermes remoto encerrou sua sessão',
       gatewaySignInRequiredDetail: 'Entre novamente para reconectar. Seus chats e configurações estão seguros.',
       signInAgain: 'Entrar novamente',
-      ipcBridgeUnavailable: "O Hermes Desktop não conseguiu falar com sua própria camada de fundo. Reinicie o app."
+      ipcBridgeUnavailable: 'O Hermes Desktop não conseguiu falar com sua própria camada de fundo. Reinicie o app.'
     },
     // Causas simples para uma falha de inicialização do backend local (`classifyBootFailure`);
     // a saída bruta fica atrás de "Mostrar logs recentes".
     causes: {
-      exitedEarly: "O serviço em segundo plano do Hermes parou logo após iniciar.",
-      timedOut: "O serviço em segundo plano do Hermes não respondeu a tempo.",
-      permission: "O Hermes não conseguiu gravar na pasta de dados (problema de permissão).",
+      exitedEarly: 'O serviço em segundo plano do Hermes parou logo após iniciar.',
+      timedOut: 'O serviço em segundo plano do Hermes não respondeu a tempo.',
+      permission: 'O Hermes não conseguiu gravar na pasta de dados (problema de permissão).',
       diskFull: 'O disco está cheio, então o Hermes não pôde iniciar.',
       portInUse: 'Outro programa está usando a porta de rede que o Hermes precisa.',
-      installMissing: "Parte da instalação do Hermes está faltando. Escolha Reparar instalação para restaurá-la."
+      installMissing: 'Parte da instalação do Hermes está faltando. Escolha Reparar instalação para restaurá-la.'
     },
     failure: {
-      title: "O Hermes não pôde iniciar",
+      title: 'O Hermes não pôde iniciar',
       description:
-        "O serviço em segundo plano do Hermes não subiu. Tente uma das etapas de recuperação abaixo. Nada aqui apaga seus chats ou configurações.",
+        'O serviço em segundo plano do Hermes não subiu. Tente uma das etapas de recuperação abaixo. Nada aqui apaga seus chats ou configurações.',
       details: 'Detalhes',
       remoteTitle: 'Login no gateway remoto necessário',
       remoteDescription:
@@ -226,7 +227,8 @@ export const pt: Translations = {
       remoteSignInHint: signInLabel =>
         `Encerra a sessão remota salva no navegador e abre ${signInLabel}. Use o gateway local para trocar para o backend integrado.`,
       signOutAndSignIn: 'Sair e entrar',
-      remoteFailureHint: 'Verifique a URL do gateway e o login em Configurações do gateway, ou mude para o gateway local.',
+      remoteFailureHint:
+        'Verifique a URL do gateway e o login em Configurações do gateway, ou mude para o gateway local.',
       cloudDownTitle: 'O agente do Nous Cloud está fora do ar',
       cloudDownDescription:
         'O agente de nuvem gerenciado pela Nous ao qual este gateway se conecta está retornando um erro de servidor. Ele não pode ser reiniciado daqui — verifique o status, mude para o gateway local ou obtenha suporte.',
@@ -265,7 +267,7 @@ export const pt: Translations = {
     updateReadyTitle: 'Atualização pronta',
     updateReadyMessage: count => `${count} ${count === 1 ? 'nova mudança disponível' : 'novas mudanças disponíveis'}.`,
     updateReadyMessageUnknown: 'Há uma nova atualização disponível.',
-    seeWhatsNew: "Ver o que há de novo",
+    seeWhatsNew: 'Ver o que há de novo',
     mcp: {
       needsAuthTitle: 'O servidor MCP precisa de nova autenticação',
       needsAuthMessage: name => `${name} MCP precisa de nova autenticação.`,
@@ -278,18 +280,23 @@ export const pt: Translations = {
       disableFailed: name => `Não foi possível desativar ${name} MCP.`
     },
     errors: {
-      elevenLabsNeedsKey: 'A entrada de voz precisa de uma chave da ElevenLabs. Adicione uma em Configurações → Chaves.',
-      elevenLabsRejectedKey: "A ElevenLabs não aceitou sua chave de API. Atualize-a em Configurações → Chaves e tente novamente.",
+      elevenLabsNeedsKey:
+        'A entrada de voz precisa de uma chave da ElevenLabs. Adicione uma em Configurações → Chaves.',
+      elevenLabsRejectedKey:
+        'A ElevenLabs não aceitou sua chave de API. Atualize-a em Configurações → Chaves e tente novamente.',
       diskFull: 'Disco cheio — libere espaço e tente novamente.',
-      storageFailure: "O Hermes não conseguiu salvar na pasta de dados. Abra Manutenção para verificar e reparar.",
+      storageFailure: 'O Hermes não conseguiu salvar na pasta de dados. Abra Manutenção para verificar e reparar.',
       gatewayAuthFailed:
         'Este Hermes não aceita mais seu login salvo. Abra Gateways e entre novamente (ou cole um novo token de acesso) e tente de novo.',
-      methodNotAllowed: "O serviço em segundo plano do Hermes está fora de sincronia com o app, provavelmente após uma atualização. Reinicie-o para corrigir.",
+      methodNotAllowed:
+        'O serviço em segundo plano do Hermes está fora de sincronia com o app, provavelmente após uma atualização. Reinicie-o para corrigir.',
       microphonePermission: 'A permissão do microfone foi negada.',
-      openaiRejectedApiKey: "A OpenAI não aceitou sua chave de API. Atualize-a em Configurações → Chaves e tente novamente.",
+      openaiRejectedApiKey:
+        'A OpenAI não aceitou sua chave de API. Atualize-a em Configurações → Chaves e tente novamente.',
       openaiTtsNeedsKey: 'A voz precisa de uma chave da OpenAI. Adicione uma em Configurações → Chaves.',
-      codeSkewRestartRequired: 'O Hermes foi atualizado, mas ainda está rodando a versão antiga. Reinicie-o para concluir a atualização.',
-      restartHermesFailed: "Não foi possível reiniciar o Hermes"
+      codeSkewRestartRequired:
+        'O Hermes foi atualizado, mas ainda está rodando a versão antiga. Reinicie-o para concluir a atualização.',
+      restartHermesFailed: 'Não foi possível reiniciar o Hermes'
     },
     actions: {
       restartHermes: 'Reiniciar o Hermes',
@@ -585,10 +592,11 @@ export const pt: Translations = {
         restartNow: 'Reiniciar gateway',
         missingEnvAction: 'Configurar',
         alreadyInstalled: (name: string) => `${name} já está instalado.`,
-        desktopTarget: "Instala na pasta local desktop-plugins deste app",
+        desktopTarget: 'Instala na pasta local desktop-plugins deste app',
         desktopTargetFromPackage: 'Carregado neste app a partir do pacote acima — o mesmo para todos os perfis',
         desktopOnlyNote: 'Pacotes somente de desktop não instalam um plugin de agente no backend.',
-        insecureWarning: 'Esta URL usa um esquema inseguro ou local. Prefira https:// ou git@ para instalações em produção.',
+        insecureWarning:
+          'Esta URL usa um esquema inseguro ou local. Prefira https:// ou git@ para instalações em produção.',
         securityHeading: 'Antes de instalar',
         securityIntro:
           'Instale apenas de fontes confiáveis — revise o repositório abaixo se quiser ver o que será adicionado.',
@@ -613,7 +621,8 @@ export const pt: Translations = {
         desktopSuccess: name => `Plugin de desktop ${name} instalado`,
         agentFailed: 'Falha ao instalar o plugin de agente',
         desktopFailed: 'Falha ao instalar o plugin de desktop',
-        missingEnv: (name, vars) => `${name} está instalado, mas precisa de uma chave para funcionar: ${vars}. Adicione agora, ou as ferramentas do plugin falharão.`
+        missingEnv: (name, vars) =>
+          `${name} está instalado, mas precisa de uma chave para funcionar: ${vars}. Adicione agora, ou as ferramentas do plugin falharão.`
       }
     },
     vault: {
@@ -624,7 +633,7 @@ export const pt: Translations = {
       loadFailed: 'Não foi possível carregar os itens do cofre',
       empty: 'Nada salvo ainda',
       emptyDesc:
-        "Você não precisa adicionar nada aqui. Peça ao agente para entrar em um site e ele pedirá o login uma vez, na hora. Use Adicionar se preferir cadastrar antecipadamente.",
+        'Você não precisa adicionar nada aqui. Peça ao agente para entrar em um site e ele pedirá o login uma vez, na hora. Use Adicionar se preferir cadastrar antecipadamente.',
       add: 'Adicionar',
       addTitle: 'Adicionar um login, cartão ou endereço',
       addDescription: 'Armazenado criptografado nesta máquina. O agente nunca vê a senha.',
@@ -662,7 +671,8 @@ export const pt: Translations = {
       deleteAction: 'Remover item salvo',
       otpField: 'Chave do autenticador',
       otpPlaceholder: 'Segredo Base32 ou link otpauth://',
-      otpHint: 'A "chave de configuração" que o site mostra quando você ativa o 2FA. Com ela salva, o Hermes gera os códigos sozinho.',
+      otpHint:
+        'A "chave de configuração" que o site mostra quando você ativa o 2FA. Com ela salva, o Hermes gera os códigos sozinho.',
       twoFactorBadge: '2FA automático',
       deleteTitle: 'Excluir este item?',
       deleteDescription: label => `"${label}" será removido. Isso não pode ser desfeito.`,
@@ -675,8 +685,10 @@ export const pt: Translations = {
         notInstalled: name =>
           `Não detectado. Instale a ferramenta de linha de comando ${name} e faça login nela; o Hermes a detecta automaticamente.`,
         disabledDesc: 'Detectado, mas desativado para o Hermes.',
-        lockedDesc: 'Detectado. O agente pedirá para você desbloqueá-lo quando precisar de um login, ou desbloqueie agora.',
-        unlockedDesc: 'Desbloqueado para esta sessão. Bloqueia automaticamente após 30 minutos ocioso ou quando o Hermes fecha.',
+        lockedDesc:
+          'Detectado. O agente pedirá para você desbloqueá-lo quando precisar de um login, ou desbloqueie agora.',
+        unlockedDesc:
+          'Desbloqueado para esta sessão. Bloqueia automaticamente após 30 minutos ocioso ou quando o Hermes fecha.',
         statusLocked: 'Bloqueado',
         statusNotDetected: 'Não detectado',
         statusOff: 'Desligado',
@@ -730,7 +742,8 @@ export const pt: Translations = {
       test: 'Enviar notificação de teste',
       testTitle: 'Hermes',
       testBody: 'As notificações estão funcionando.',
-      testSent: 'Teste enviado. Se nada aparecer, verifique as permissões de notificação do SO e o modo Foco/Não Perturbe.',
+      testSent:
+        'Teste enviado. Se nada aparecer, verifique as permissões de notificação do SO e o modo Foco/Não Perturbe.',
       testUnsupported: 'Este sistema não suporta notificações nativas.',
       completionSoundTitle: 'Som de conclusão',
       completionSoundDesc: 'Toca quando um turno do agente termina. Escolha uma predefinição e ouça a prévia aqui.',
@@ -777,12 +790,14 @@ export const pt: Translations = {
       sessionDensityComfortable: 'Confortável',
       sessionDensityDetailed: 'Detalhado',
       tabStripTitle: 'Faixa de abas',
-      tabStripDesc: 'Mostra abas acima de uma zona. Oculta automaticamente para um único painel, a menos que outra zona de chat ou bloco esteja aberta.',
+      tabStripDesc:
+        'Mostra abas acima de uma zona. Oculta automaticamente para um único painel, a menos que outra zona de chat ou bloco esteja aberta.',
       tabStripAuto: 'Automático',
       tabStripAlways: 'Sempre',
       tabStripNever: 'Nunca',
       appActionsTitle: 'Ações do app',
-      appActionsDesc: 'Onde Configurações, Layout e HUD ficam na barra de título. Direita deixa espaço para abas à esquerda.',
+      appActionsDesc:
+        'Onde Configurações, Layout e HUD ficam na barra de título. Direita deixa espaço para abas à esquerda.',
       appActionsLeft: 'Esquerda',
       appActionsRight: 'Direita',
       terminalFontTitle: 'Fonte do terminal',
@@ -793,13 +808,14 @@ export const pt: Translations = {
       terminalFontReset: 'Usar padrão',
       chatFontTitle: 'Fonte do chat',
       chatFontDesc:
-        "Escolha uma fonte instalada para o chat e o restante do app. Útil para fontes de legibilidade como OpenDyslexic; deixe em branco para usar a fonte do tema.",
+        'Escolha uma fonte instalada para o chat e o restante do app. Útil para fontes de legibilidade como OpenDyslexic; deixe em branco para usar a fonte do tema.',
       chatFontPlaceholder: 'OpenDyslexic ou uma pilha de fontes CSS',
       chatFontPreview: 'Prévia',
       chatFontSample: 'The quick brown fox jumps over the lazy dog. 0123456789',
       chatFontReset: 'Usar fonte do tema',
       translucencyTitle: 'Translucidez da janela',
-      translucencyDesc: 'Veja sua área de trabalho através da janela inteira, texto e tudo. Ajustada separadamente para claro e escuro.',
+      translucencyDesc:
+        'Veja sua área de trabalho através da janela inteira, texto e tudo. Ajustada separadamente para claro e escuro.',
       translucencyGlassDesc:
         'Vidro fosco: a área de trabalho aparece como um desfoque suave enquanto o texto permanece nítido. Ajustado separadamente para claro e escuro.',
       translucencyModeClear: 'Transparente',
@@ -834,7 +850,8 @@ export const pt: Translations = {
       toursDesc:
         'Deixe o Hermes destacar cada etapa enquanto guia você pelo app. Desliga automaticamente após seus primeiros 30 dias; você pode reativar.',
       composerPopoutTitle: 'Composer flutuante',
-      composerPopoutDesc: 'Permite arrastar o composer para fora do encaixe. Desative para mantê-lo travado na parte inferior.',
+      composerPopoutDesc:
+        'Permite arrastar o composer para fora do encaixe. Desative para mantê-lo travado na parte inferior.',
       vibeHeartsTitle: 'Corações de vibração',
       vibeHeartsDesc:
         'Corações flutuantes quando você agradece, diz "ily", "good bot" ou envia um coração. Separado de Reações a mensagens acima.',
@@ -881,7 +898,7 @@ export const pt: Translations = {
         chooseTitle: 'Escolha um pet',
         chooseDesc: 'Escolher um o instala (se necessário) e o torna ativo.',
         searchPlaceholder: 'Buscar pets…',
-        unreachable: "Não foi possível acessar a galeria do petdex. Verifique sua conexão e reabra esta página.",
+        unreachable: 'Não foi possível acessar a galeria do petdex. Verifique sua conexão e reabra esta página.',
         noMatch: query => `Nenhum pet corresponde a "${query}".`,
         installedTag: 'instalado',
         generatedTag: 'Gerado',
@@ -890,7 +907,7 @@ export const pt: Translations = {
         uninstall: name => `Desinstalar ${name}`,
         delete: name => `Excluir ${name}`,
         deleteTitle: name => `Excluir ${name}?`,
-        deleteBody: "Isso exclui o pet permanentemente — ele não pode ser reinstalado.",
+        deleteBody: 'Isso exclui o pet permanentemente — ele não pode ser reinstalado.',
         deleteConfirm: 'Excluir',
         rename: name => `Renomear ${name}`,
         renameTitle: 'Renomear pet',
@@ -947,15 +964,16 @@ export const pt: Translations = {
       updates: 'Atualizações',
       checkNow: 'Verificar agora',
       checking: 'Verificando…',
-      seeWhatsNew: "Ver o que há de novo",
+      seeWhatsNew: 'Ver o que há de novo',
       updateNow: 'Atualizar agora',
       releaseNotes: 'Notas da versão',
-      onLatest: "Você está na versão mais recente.",
+      onLatest: 'Você está na versão mais recente.',
       installing: 'Uma atualização está sendo instalada no momento.',
-      cantUpdate: "Este build não pode se atualizar sozinho de dentro do app.",
-      cantReach: "Não foi possível acessar o servidor de atualização.",
+      cantUpdate: 'Este build não pode se atualizar sozinho de dentro do app.',
+      cantReach: 'Não foi possível acessar o servidor de atualização.',
       tapCheck: 'Toque em "Verificar agora" para procurar atualizações.',
-      updateReady: count => `Uma nova atualização está pronta (${count} ${count === 1 ? 'mudança incluída' : 'mudanças incluídas'}).`,
+      updateReady: count =>
+        `Uma nova atualização está pronta (${count} ${count === 1 ? 'mudança incluída' : 'mudanças incluídas'}).`,
       updateReadyUnknown: 'Uma nova atualização está pronta.',
       lastChecked: age => `Última verificação ${age}`,
       justNowSuffix: ' · agora mesmo',
@@ -988,9 +1006,11 @@ export const pt: Translations = {
       toolsetsWipeConfirm:
         'Remover todos os toolsets ativados? Isso desativa memória, terminal, busca na web, delegação e a maioria das outras ferramentas até você reativá-las.',
       keepAwakeTitle: 'Manter o computador acordado',
-      keepAwakeDesc: 'Impede que esta máquina durma para que execuções longas ou noturnas continuem. A tela ainda pode escurecer.',
+      keepAwakeDesc:
+        'Impede que esta máquina durma para que execuções longas ou noturnas continuem. A tela ainda pode escurecer.',
       disableF12Title: 'Desativar DevTools com F12',
-      disableF12Desc: 'Bloqueia o F12 de abrir as Ferramentas do Desenvolvedor. Ctrl+Shift+I (ou Cmd+Opt+I no Mac) ainda funciona.',
+      disableF12Desc:
+        'Bloqueia o F12 de abrir as Ferramentas do Desenvolvedor. Ctrl+Shift+I (ou Cmd+Opt+I no Mac) ainda funciona.',
       attachmentSizeTitle: 'Tamanho máximo de prévia / carregamento de imagem',
       attachmentSizeDesc:
         'Quão grande um arquivo local o Desktop carregará para prévias e anexos de imagem, em MB. O padrão é 16. Anexos remotos que não são imagem usam um limite separado de 256 MB. Definir isso muito alto carrega o arquivo inteiro em memória e pode travar o app.',
@@ -1031,7 +1051,8 @@ export const pt: Translations = {
     // Registro de conexões multi-v2: Configurações → Gateways.
     connections: {
       title: 'Gateways registrados',
-      intro: 'Gerencie este dispositivo e todos os gateways do Hermes que ele pode acessar por conexões remotas, SSH ou Cloud.',
+      intro:
+        'Gerencie este dispositivo e todos os gateways do Hermes que ele pode acessar por conexões remotas, SSH ou Cloud.',
       stagedNote:
         'Alterne gateways em Sessões. Perfis, chats, mensagens e tarefas cron permanecem com seu gateway; o trabalho em outros gateways continua rodando.',
       launchModeTitle: 'Na inicialização, voltar para Sessões no último gateway usado',
@@ -1068,7 +1089,8 @@ export const pt: Translations = {
       kindCloudDesc: 'Uma instância hospedada descoberta pela sua conta Hermes Cloud.',
       kindSshDesc: 'Uma instalação do Hermes acessada via SSH.',
       labelTitle: 'Nome',
-      labelDesc: 'Obrigatório. Mostrado em todos os lugares onde esta instância aparece; deve ser único (ex.: "Homelab", "Notebook do trabalho").',
+      labelDesc:
+        'Obrigatório. Mostrado em todos os lugares onde esta instância aparece; deve ser único (ex.: "Homelab", "Notebook do trabalho").',
       labelPlaceholder: 'Homelab',
       urlTitle: 'URL do gateway',
       sshHostTitle: 'Host SSH',
@@ -1112,7 +1134,8 @@ export const pt: Translations = {
     gateway: {
       loading: 'Carregando configurações do gateway...',
       unavailableTitle: 'Configurações do gateway indisponíveis',
-      unavailableDesc: 'As configurações de conexão só podem ser alteradas a partir do app Hermes Desktop no computador que o executa.',
+      unavailableDesc:
+        'As configurações de conexão só podem ser alteradas a partir do app Hermes Desktop no computador que o executa.',
       title: 'Conexão do gateway',
       envOverride: 'substituição por env',
       intro:
@@ -1125,7 +1148,8 @@ export const pt: Translations = {
       localDesc: 'Inicia um backend privado do Hermes no localhost. É o padrão e funciona offline.',
       remoteTitle: 'Gateway remoto',
       remoteDesc: 'Conecta este shell de desktop a um backend remoto do Hermes.',
-      remoteAuthHint: 'Gateways hospedados usam OAuth ou nome de usuário e senha; os auto-hospedados podem usar um token de sessão.',
+      remoteAuthHint:
+        'Gateways hospedados usam OAuth ou nome de usuário e senha; os auto-hospedados podem usar um token de sessão.',
       cloudTitle: 'Hermes Cloud',
       cloudDesc: 'Entre uma vez no Hermes Cloud e escolha entre os agentes da sua conta — sem colar URL.',
       cloudSignInTitle: 'Hermes Cloud',
@@ -1163,9 +1187,11 @@ export const pt: Translations = {
       cloudAgentProvisioning: 'Provisionando…',
       cloudStatusLabel: status => `Status: ${status}`,
       remoteUrlTitle: 'URL remota',
-      remoteUrlDesc: 'URL base do backend remoto do dashboard. Prefixos de caminho são suportados, por exemplo /hermes.',
+      remoteUrlDesc:
+        'URL base do backend remoto do dashboard. Prefixos de caminho são suportados, por exemplo /hermes.',
       probing: 'Verificando como este gateway autentica…',
-      probeError: "O Hermes não consegue acessar esse endereço. Verifique a URL e se o outro computador está rodando o Hermes — as opções de login aparecem assim que ele responder.",
+      probeError:
+        'O Hermes não consegue acessar esse endereço. Verifique a URL e se o outro computador está rodando o Hermes — as opções de login aparecem assim que ele responder.',
       signedIn: 'Conectado',
       signIn: 'Entrar',
       signOut: 'Sair',
@@ -1177,7 +1203,8 @@ export const pt: Translations = {
       authNeedsPassword: 'Este gateway usa nome de usuário e senha. Entre para autorizar este app de desktop.',
       authNeedsOauth: provider => `Este gateway usa OAuth. Entre com ${provider} para autorizar este app de desktop.`,
       tokenTitle: 'Token de sessão',
-      tokenDesc: 'O token de sessão do dashboard usado para acesso REST e WebSocket. Deixe em branco para manter o token salvo.',
+      tokenDesc:
+        'O token de sessão do dashboard usado para acesso REST e WebSocket. Deixe em branco para manter o token salvo.',
       existingToken: value => `Token existente ${value}`,
       savedToken: 'salvo',
       pasteSessionToken: 'Colar token de sessão',
@@ -1221,7 +1248,8 @@ export const pt: Translations = {
       sshTitle: 'Conectar via SSH',
       sshDesc:
         'O Hermes é iniciado no remoto via SSH e tunelado para este app — nada para iniciar ou expor por conta própria. Requer acesso SSH por chave funcionando no host.',
-      sshTrustHint: 'A primeira chave de host apresentada é confiada e fixada; mudanças posteriores falham de forma segura.',
+      sshTrustHint:
+        'A primeira chave de host apresentada é confiada e fixada; mudanças posteriores falham de forma segura.',
       sshHostTitle: 'Host',
       sshHostDesc: 'usuário@host, ou um alias de Host de ~/.ssh/config.',
       sshHostPick: 'Selecione um host…',
@@ -1352,7 +1380,8 @@ export const pt: Translations = {
       deepLinkErrorUrl: 'Apenas URLs de servidor http:// e https:// são permitidas.',
       deepLinkErrorTooLarge: 'O payload de configuração excede o limite de 32 KB.',
       importButton: 'Importar',
-      importPlaceholder: 'Cole um trecho de mcp.json, comando npx/docker, linha de claude mcp add, URL ou link do Cursor…',
+      importPlaceholder:
+        'Cole um trecho de mcp.json, comando npx/docker, linha de claude mcp add, URL ou link do Cursor…',
       importNoMatch: 'Nenhuma configuração de servidor reconhecida no texto colado.',
       importConfirm: 'Adicionar ao mcp.json',
       importConfirmMany: count => `Adicionar ${count} servidores ao mcp.json`
@@ -1368,13 +1397,15 @@ export const pt: Translations = {
       reasoningOff: 'Desligado',
       defaultsFailed: 'Falha ao salvar os padrões do modelo',
       loadFailed: 'Não foi possível carregar os modelos',
-      restartRequired: 'Este backend está rodando código antigo após uma atualização. Reinicie-o para carregar o novo código.',
+      restartRequired:
+        'Este backend está rodando código antigo após uma atualização. Reinicie-o para carregar o novo código.',
       restartBackend: 'Reiniciar backend',
       restartingBackend: 'Reiniciando o backend...',
       restartFailed: 'Não foi possível reiniciar o backend',
       auxiliaryTitle: 'Modelos auxiliares',
       resetAllToMain: 'Restaurar tudo para o principal',
-      auxiliaryDesc: 'Tarefas auxiliares rodam no modelo principal por padrão. Atribua um modelo dedicado a qualquer tarefa para substituir.',
+      auxiliaryDesc:
+        'Tarefas auxiliares rodam no modelo principal por padrão. Atribua um modelo dedicado a qualquer tarefa para substituir.',
       setToMain: 'Definir como principal',
       change: 'Alterar',
       autoUseMain: 'auto · usar modelo principal',
@@ -1382,7 +1413,7 @@ export const pt: Translations = {
       providerDefault: '(padrão do provedor)',
       fallbackAdd: 'Adicionar fallback',
       fallbackEmpty: 'Sem modelos de fallback — o modelo padrão é usado, a menos que falhe.',
-      notInCatalog: "não está na lista de modelos deste provedor — chamadas podem cair para um backup.",
+      notInCatalog: 'não está na lista de modelos deste provedor — chamadas podem cair para um backup.',
       moaTitle: 'Mistura de Agentes',
       moaPreset: 'Predefinição',
       moaAggregator: 'Agregador',
@@ -1444,8 +1475,7 @@ export const pt: Translations = {
       quickstartTitle: 'Rodar um modelo nesta máquina',
       quickstartDetail: (model, size) =>
         `Um clique configura tudo: o motor local, ${model} (download de ${size}) e seu padrão para novos chats. Nada sai deste computador.`,
-      quickstartDetailReady: model =>
-        `Um clique torna ${model} seu padrão para novos chats. Tudo roda nesta máquina.`,
+      quickstartDetailReady: model => `Um clique torna ${model} seu padrão para novos chats. Tudo roda nesta máquina.`,
       quickstartAction: 'Configurar para mim',
       quickstartConfigure: 'Deixe-me escolher',
       quickstartDoneToast: model => `${model} está configurado — novos chats rodam nesta máquina.`,
@@ -1511,7 +1541,7 @@ export const pt: Translations = {
       sideloadDone: '{name} adicionado.',
       sideloadAlreadyPresent: 'Já está na sua biblioteca.',
       pillFullContext: max => `Contexto completo de ${max}`,
-      pillFullContextTip: "Roda na janela de contexto completa do modelo desde o início",
+      pillFullContextTip: 'Roda na janela de contexto completa do modelo desde o início',
       pillUpTo: max => `Contexto de até ${max}`,
       pillGrowsTip: 'Cresce automaticamente conforme sua conversa precisa de mais espaço',
       pillVision: 'Vê imagens',
@@ -1533,7 +1563,8 @@ export const pt: Translations = {
       disconnectInTerminal: 'Desconectar (executa o comando de remoção no terminal)',
       removeConfirm: provider => `Remover ${provider}?`,
       removeExternalGeneric: provider => `${provider} é gerenciado por sua própria CLI — remova lá.`,
-      removeKeyManaged: provider => `${provider} está configurado a partir de uma chave de API. Remova-o em Chaves de API.`,
+      removeKeyManaged: provider =>
+        `${provider} está configurado a partir de uma chave de API. Remova-o em Chaves de API.`,
       removeTerminalConfirm: (provider, command) =>
         `Desconectar ${provider}? Isso executa "${command}" no terminal para limpar a credencial.`,
       removeTerminalRunning: provider => `Executando a desconexão de ${provider} no terminal…`,
@@ -1545,7 +1576,8 @@ export const pt: Translations = {
       noKeysMatch: 'Nenhum provedor corresponde à sua busca.',
       localEndpoint: {
         title: 'Endpoint local / personalizado',
-        description: 'Aponte o Hermes para qualquer endpoint compatível com OpenAI (Zyphra, vLLM, llama.cpp, Ollama, etc).'
+        description:
+          'Aponte o Hermes para qualquer endpoint compatível com OpenAI (Zyphra, vLLM, llama.cpp, Ollama, etc).'
       },
       loading: 'Carregando provedores...'
     },
@@ -1563,14 +1595,15 @@ export const pt: Translations = {
       deleteConfirm: title => `Excluir permanentemente "${title}"? Isso não pode ser desfeito.`,
       autoArchiveTitle: 'Arquivar chats antigos automaticamente',
       autoArchiveDesc:
-        "Arquiva automaticamente chats que você não toca há um tempo. Chats fixados nunca são arquivados, e nada é excluído — chats arquivados apenas mudam para cá.",
+        'Arquiva automaticamente chats que você não toca há um tempo. Chats fixados nunca são arquivados, e nada é excluído — chats arquivados apenas mudam para cá.',
       autoArchiveDaysLabel: 'Arquivar após',
       autoArchiveDaysUnit: 'dias de inatividade',
       autoArchiveFailed: 'Não foi possível atualizar o arquivamento automático',
       defaultDirTitle: 'Diretório padrão de projetos',
       defaultDirDesc:
         'Novas sessões começam nesta pasta, a menos que você escolha outra. Deixe indefinido para usar seu diretório inicial.',
-      defaultDirUpdated: 'Diretório padrão de projetos atualizado — inicie um novo chat (Ctrl/⌘+N) para que tenha efeito',
+      defaultDirUpdated:
+        'Diretório padrão de projetos atualizado — inicie um novo chat (Ctrl/⌘+N) para que tenha efeito',
       defaultsTo: label => `Padrão: ${label}.`,
       change: 'Alterar',
       choose: 'Escolher',
@@ -1608,7 +1641,8 @@ export const pt: Translations = {
       useBackend: 'Usar este backend',
       nousIncluded: 'Incluído em uma assinatura da Nous — entre com sua conta Nous para ativar.',
       nousAuthNeededTitle: 'Entre com sua conta Nous',
-      nousAuthNeededMessage: provider => `${provider} está salvo, mas só funcionará depois que você entrar com sua conta Nous.`,
+      nousAuthNeededMessage: provider =>
+        `${provider} está salvo, mas só funcionará depois que você entrar com sua conta Nous.`,
       nousAuthSignIn: 'Entrar',
       nousAuthDoneTitle: 'Conta Nous conectada',
       nousAuthDoneMessage: 'Seus backends de assinatura agora estão ativos.',
@@ -1627,7 +1661,8 @@ export const pt: Translations = {
       postSetupCompleteTitle: 'Configuração concluída',
       postSetupCompleteMessage: step => `${step} instalado.`,
       postSetupErrorTitle: 'A configuração terminou com erros',
-      postSetupErrorMessage: step => `A configuração de ${step} não terminou. Abra os logs para ver o motivo e execute novamente.`,
+      postSetupErrorMessage: step =>
+        `A configuração de ${step} não terminou. Abra os logs para ver o motivo e execute novamente.`,
       postSetupOpenLogs: 'Abrir logs',
       postSetupRunAgain: 'Executar novamente',
       postSetupFailed: step => `Falha ao executar a configuração de ${step}`,
@@ -1671,7 +1706,7 @@ export const pt: Translations = {
       browserRealProfile: {
         label: 'Usar meu perfil real do navegador',
         description:
-          "Copia os logins e cookies do seu navegador padrão para um snapshot gerenciado com o qual o agente navega. Seu perfil ativo nunca é aberto diretamente. Aplica-se a novas sessões.",
+          'Copia os logins e cookies do seu navegador padrão para um snapshot gerenciado com o qual o agente navega. Seu perfil ativo nunca é aberto diretamente. Aplica-se a novas sessões.',
         enabledTitle: 'Navegação com perfil real ativada',
         enabledMessage: 'Novas sessões navegarão com um snapshot do seu perfil padrão do navegador.',
         disabledTitle: 'Navegação com perfil real desativada',
@@ -1683,7 +1718,7 @@ export const pt: Translations = {
           bulletSnapshot: 'Cookies e logins são copiados para um snapshot gerenciado.',
           bulletLiveProfile: 'Seu perfil ativo do navegador nunca é aberto diretamente.',
           bulletLocal: 'Nada sai deste computador.',
-          dontShowAgain: "Não mostrar novamente",
+          dontShowAgain: 'Não mostrar novamente',
           notNow: 'Agora não',
           enable: 'Usar meu perfil'
         }
@@ -1752,7 +1787,8 @@ export const pt: Translations = {
       agentTitle: 'Plugins de agente',
       agentBlurb:
         'Estende o agente para o perfil selecionado — ferramentas, hooks, provedores. Entram em vigor após reiniciar o gateway.',
-      pageBlurb: 'Uma linha por plugin. Um plugin pode estender este app, o agente ou ambos — cada metade tem seu próprio interruptor.',
+      pageBlurb:
+        'Uma linha por plugin. Um plugin pode estender este app, o agente ou ambos — cada metade tem seu próprio interruptor.',
       halfDesktop: 'Desktop',
       halfDesktopHint: 'este app, o mesmo para todos os perfis',
       halfAgent: 'Agente',
@@ -1774,7 +1810,8 @@ export const pt: Translations = {
       emptyHint: 'Navegue pelo catálogo abaixo e instale um plugin revisado com um clique.',
       loadFailed: 'Não foi possível carregar os plugins de agente',
       toggleFailed: (name: string) => `Não foi possível alternar ${name}`,
-      legacyBackend: 'Este backend é anterior aos interruptores de plugin endereçados por chave — atualize o Hermes para gerenciá-los aqui.',
+      legacyBackend:
+        'Este backend é anterior aos interruptores de plugin endereçados por chave — atualize o Hermes para gerenciá-los aqui.',
       portableBadge: 'portátil',
       catalogTitle: 'Catálogo de plugins',
       catalogBrowse: 'Explorar',
@@ -1804,7 +1841,8 @@ export const pt: Translations = {
       landingHint:
         'Busque no hub para navegar por skills instaláveis do índice oficial, GitHub e fontes da comunidade.',
       noResults: 'Nenhuma skill correspondente encontrada no hub.',
-      resultCount: (count, ms) => `${count} ${count === 1 ? 'resultado' : 'resultados'}${ms !== null ? ` em ${ms}ms` : ''}`,
+      resultCount: (count, ms) =>
+        `${count} ${count === 1 ? 'resultado' : 'resultados'}${ms !== null ? ` em ${ms}ms` : ''}`,
       timedOut: sources => `Tempo esgotado: ${sources}`,
       installed: 'Instalada',
       install: 'Instalar',
@@ -2171,7 +2209,8 @@ export const pt: Translations = {
     failedSave: name => `Falha ao salvar ${name}`,
     failedClear: key => `Falha ao limpar ${key}`,
     pendingRequests: count => `Solicitações pendentes (${count})`,
-    pendingAria: count => `${count} ${count === 1 ? 'solicitação de pareamento pendente' : 'solicitações de pareamento pendentes'}`,
+    pendingAria: count =>
+      `${count} ${count === 1 ? 'solicitação de pareamento pendente' : 'solicitações de pareamento pendentes'}`,
     approvedUsers: count => `Usuários aprovados (${count})`,
     approve: 'Aprovar',
     approving: 'Aprovando...',
@@ -2190,13 +2229,14 @@ export const pt: Translations = {
     restartNeeded: 'Salvo. Reinicie o gateway de mensagens para que as novas configurações tenham efeito.',
     restartNow: 'Reiniciar agora',
     restarting: 'Reiniciando…',
-    restartFailedManual: "O Hermes não pôde reiniciar para aplicar suas configurações de mensagens",
+    restartFailedManual: 'O Hermes não pôde reiniciar para aplicar suas configurações de mensagens',
     restartFailedManualDetail: 'Tente Reiniciar novamente; se ainda falhar, abra os logs e envie diagnósticos.',
     restartAgain: 'Reiniciar novamente',
     openLogs: 'Abrir logs',
     telegramQr: {
       title: 'Escolha como conectar seu bot do Telegram',
-      subtitle: 'Ambas as opções conectam um bot que você controla e salvam suas credenciais apenas nesta instalação do Hermes.',
+      subtitle:
+        'Ambas as opções conectam um bot que você controla e salvam suas credenciais apenas nesta instalação do Hermes.',
       quickSetup: 'Configuração rápida',
       recommended: 'Recomendado',
       quickHelp:
@@ -2275,7 +2315,10 @@ export const pt: Translations = {
         help: 'Use o token de nível de app necessário para o Socket Mode.',
         placeholder: 'Colar token do app do Slack'
       },
-      SLACK_ALLOWED_USERS: { label: 'IDs de usuário permitidos do Slack', help: 'Recomendado. IDs de usuário do Slack separados por vírgula.' },
+      SLACK_ALLOWED_USERS: {
+        label: 'IDs de usuário permitidos do Slack',
+        help: 'Recomendado. IDs de usuário do Slack separados por vírgula.'
+      },
       MATTERMOST_URL: { label: 'URL do servidor', placeholder: 'https://mattermost.example.com' },
       MATTERMOST_TOKEN: { label: 'Token do bot' },
       MATTERMOST_ALLOWED_USERS: {
@@ -2295,7 +2338,10 @@ export const pt: Translations = {
         help: 'URL de uma ponte REST signal-cli em execução.'
       },
       SIGNAL_ACCOUNT: { label: 'Número de telefone', help: 'O número registrado na sua ponte signal-cli.' },
-      SIGNAL_ALLOWED_USERS: { label: 'Usuários permitidos do Signal', help: 'Recomendado. Identificadores do Signal separados por vírgula.' },
+      SIGNAL_ALLOWED_USERS: {
+        label: 'Usuários permitidos do Signal',
+        help: 'Recomendado. Identificadores do Signal separados por vírgula.'
+      },
       WHATSAPP_ENABLED: {
         label: 'Ativar ponte do WhatsApp',
         help: 'Definido automaticamente pelo interruptor abaixo. Deixe como está, a menos que saiba que precisa.'
@@ -2335,7 +2381,8 @@ export const pt: Translations = {
     toggleFailed: (name, enabled) => `Falha ao ${enabled ? 'ativar' : 'desativar'} "${name}"`,
     newSubscription: 'Nova assinatura',
     restarting: 'Reiniciando o gateway...',
-    restartNeeded: 'Os webhooks estão ativados, mas o gateway ainda precisa reiniciar antes de o receptor entrar no ar.',
+    restartNeeded:
+      'Os webhooks estão ativados, mas o gateway ainda precisa reiniciar antes de o receptor entrar no ar.',
     restartGateway: 'Reiniciar gateway',
     restartingGateway: 'Reiniciando...',
     restartFailed: (detail: string) => `Falha ao reiniciar o gateway${detail}`,
@@ -2408,7 +2455,8 @@ export const pt: Translations = {
       menuItem: 'Conectar a um host remoto…',
       badge: (host: string) => `Roda em ${host}`,
       title: (profile: string) => `Conectar ${profile} a um host remoto`,
-      description: 'As sessões deste perfil rodarão no Hermes remoto para o qual você apontar, em vez deste computador.',
+      description:
+        'As sessões deste perfil rodarão no Hermes remoto para o qual você apontar, em vez deste computador.',
       urlLabel: 'Endereço remoto',
       urlPlaceholder: 'https://hermes.example.com',
       urlInvalid: 'Digite um endereço completo começando com http:// ou https://',
@@ -2466,7 +2514,8 @@ export const pt: Translations = {
     notSet: 'Não definido',
     soulDesc: 'O prompt de sistema e as instruções de persona embutidos neste perfil.',
     soulOptional: 'opcional',
-    soulPlaceholder: mode => `O prompt de sistema / persona para este perfil.\nDeixe em branco para manter o padrão ${mode}.`,
+    soulPlaceholder: mode =>
+      `O prompt de sistema / persona para este perfil.\nDeixe em branco para manter o padrão ${mode}.`,
     soulPlaceholderCloned: 'clonado',
     soulPlaceholderEmpty: 'vazio',
     unsavedChanges: 'Mudanças não salvas',
@@ -2622,7 +2671,8 @@ export const pt: Translations = {
     editTitle: 'Editar tarefa cron',
     createTitle: 'Nova tarefa cron',
     editDesc: 'Atualize o agendamento, o prompt ou o destino de entrega. As mudanças se aplicam na próxima execução.',
-    createDesc: 'Agende um prompt para rodar automaticamente. Use sintaxe cron ou uma frase natural como "a cada 15 minutos".',
+    createDesc:
+      'Agende um prompt para rodar automaticamente. Use sintaxe cron ou uma frase natural como "a cada 15 minutos".',
     nameLabel: 'Nome',
     namePlaceholder: 'Resumo da manhã',
     promptLabel: 'Prompt',
@@ -2771,7 +2821,7 @@ export const pt: Translations = {
       namePlaceholder: 'ex.: Skunkworks',
       foldersLabel: 'Pastas',
       ideaLabel: 'Ideia',
-      ideaPlaceholder: "Sobre o que é este projeto? (salvo em IDEA.md)",
+      ideaPlaceholder: 'Sobre o que é este projeto? (salvo em IDEA.md)',
       ideaGenerate: 'Gerar ideia',
       ideaGenerating: 'Gerando…',
       ideaShuffle: 'Embaralhar modelos',
@@ -2798,7 +2848,8 @@ export const pt: Translations = {
       createFailed: 'Não foi possível criar o projeto',
       staleBackend:
         'Atualize o backend do Hermes para criar projetos — seu backend é mais antigo que este app de desktop (Configurações → Atualizações → Backend).',
-      deleteConfirm: 'Isso remove o projeto salvo do Hermes. Arquivos, repositórios git e worktrees permanecem intocados.',
+      deleteConfirm:
+        'Isso remove o projeto salvo do Hermes. Arquivos, repositórios git e worktrees permanecem intocados.',
       startWork: 'Novo worktree',
       newWorktreeTitle: 'Novo worktree',
       newWorktreeDesc: 'Nomeie o branch para este worktree.',
@@ -2908,7 +2959,7 @@ export const pt: Translations = {
     newSessionPlaceholders: [
       'O que vamos construir?',
       'Dê uma tarefa ao Hermes',
-      "O que você tem em mente?",
+      'O que você tem em mente?',
       'Descreva o que você precisa',
       'O que devemos resolver?',
       'Pergunte qualquer coisa',
@@ -2918,7 +2969,7 @@ export const pt: Translations = {
       'Enviar uma continuação',
       'Adicionar mais contexto',
       'Refinar a solicitação',
-      "O que vem a seguir?",
+      'O que vem a seguir?',
       'Continue',
       'Vá mais fundo',
       'Ajuste ou continue'
@@ -3207,8 +3258,10 @@ export const pt: Translations = {
       viewAsList: 'Ver como lista',
       revert: 'Reverter',
       revertAll: 'Reverter tudo',
-      revertConfirm: 'Descartar as mudanças deste arquivo e restaurá-lo ao estado commitado? Isso não pode ser desfeito.',
-      revertAllConfirm: 'Descartar todas as mudanças e restaurar os arquivos ao estado commitado? Isso não pode ser desfeito.',
+      revertConfirm:
+        'Descartar as mudanças deste arquivo e restaurá-lo ao estado commitado? Isso não pode ser desfeito.',
+      revertAllConfirm:
+        'Descartar todas as mudanças e restaurar os arquivos ao estado commitado? Isso não pode ser desfeito.',
       staged: 'Preparado',
       noChanges: 'Sem mudanças',
       notRepo: 'Não é um repositório git',
@@ -3225,7 +3278,7 @@ export const pt: Translations = {
       openPr: 'Abrir PR',
       ghMissing: 'Instale o GitHub CLI (gh) e faça login para abrir PRs',
       agentShip: 'Pedir ao Hermes para abrir PR',
-      agentShipUnavailable: "O chat dono dessas mudanças não está na tela.",
+      agentShipUnavailable: 'O chat dono dessas mudanças não está na tela.',
       agentShipPrompt:
         'Revise as mudanças atuais, faça commit com uma mensagem de commit convencional clara, envie o branch e abra um pull request.',
       newBranch: 'Novo branch',
@@ -3257,7 +3310,7 @@ export const pt: Translations = {
     notAvailableTitle: 'Atualização indisponível',
     unsupportedMessage: 'Esta versão do Hermes não pode se atualizar sozinha de dentro do app.',
     connectionRetry:
-      "O Hermes não conseguiu acessar o servidor de atualização. Verifique sua conexão com a internet e tente novamente. Se você usa um Hermes remoto, certifique-se de que ele está online.",
+      'O Hermes não conseguiu acessar o servidor de atualização. Verifique sua conexão com a internet e tente novamente. Se você usa um Hermes remoto, certifique-se de que ele está online.',
     connectionSettings: 'Configurações de conexão',
     openDownloadPage: 'Abrir página de download',
     latestBody: 'Você está na versão mais recente.',
@@ -3267,12 +3320,14 @@ export const pt: Translations = {
     availableBody: 'Uma nova versão do Hermes está pronta para instalar.',
     availableTitleBackend: 'Atualização do backend disponível',
     availableBodyBackend: 'Uma versão mais nova do backend conectado do Hermes está pronta para instalar.',
-    availableBodyNoChangelog: 'Uma versão mais nova está pronta. Notas de versão não estão disponíveis para este tipo de instalação.',
+    availableBodyNoChangelog:
+      'Uma versão mais nova está pronta. Notas de versão não estão disponíveis para este tipo de instalação.',
     updateNow: 'Atualizar agora',
     maybeLater: 'Talvez depois',
     moreChanges: count => `+ ${count} ${count === 1 ? 'mudança a mais incluída' : 'mudanças a mais incluídas'}.`,
     manualTitle: 'Atualize pelo seu terminal',
-    manualBody: 'Você instalou o Hermes pela linha de comando, então as atualizações rodam lá também. Cole isto no seu terminal:',
+    manualBody:
+      'Você instalou o Hermes pela linha de comando, então as atualizações rodam lá também. Cole isto no seu terminal:',
     manualPickedUp: 'O Hermes assumirá a nova versão na próxima vez que você iniciá-lo.',
     guiSkewTitle: 'Atualize o app de desktop',
     guiSkewBody:
@@ -3328,10 +3383,11 @@ export const pt: Translations = {
     sessionsText:
       'Esta lista pertence ao perfil padrão. Nova sessão inicia uma em qualquer perfil selecionado. Alterne perfis no trilho e a lista muda junto.',
     stayTitle: 'O Hermes está a um clique de distância',
-    stayText: 'Alterne para o perfil de configuração e abra Bem-vindo ao Hermes sempre que quiser uma ajuda. Ele fica lá.'
+    stayText:
+      'Alterne para o perfil de configuração e abra Bem-vindo ao Hermes sempre que quiser uma ajuda. Ele fica lá.'
   },
   guidedGreeting: {
-    line: "Ei, pode entrar. Eu sou o Hermes. Me dê dois minutos para arrumar as coisas ao seu redor e depois vamos me colocar para trabalhar em algo que você realmente queira feito.\n\nPrimeiro, como devo te chamar?",
+    line: 'Ei, pode entrar. Eu sou o Hermes. Me dê dois minutos para arrumar as coisas ao seu redor e depois vamos me colocar para trabalhar em algo que você realmente queira feito.\n\nPrimeiro, como devo te chamar?',
     nameSuggestion: (name: string) => `(Também posso te chamar de ${name}, se preferir.)`
   },
   install: {
@@ -3355,17 +3411,20 @@ export const pt: Translations = {
       'Conecte este app a um gateway do Hermes que você já executa, ou instale o Hermes localmente neste computador.',
     connectExistingTitle: 'Conectar a um Hermes existente',
     connectExistingShort: 'Conectar existente',
-    connectExistingDesc: 'Use um backend remoto com token de sessão ou login no navegador. Nenhuma instalação local será iniciada.',
+    connectExistingDesc:
+      'Use um backend remoto com token de sessão ou login no navegador. Nenhuma instalação local será iniciada.',
     installLocalTitle: 'Instalar o Hermes localmente',
     installLocalDesc: 'Baixa o Hermes, cria o ambiente Python e roda o backend neste computador.',
     localStartUnavailable: 'A instalação local não pôde iniciar. Reinicie o Hermes Desktop e tente novamente.',
     remoteSetupTitle: 'Conectar a um Hermes existente',
-    remoteSetupDesc: 'Digite a URL do seu gateway. O Hermes Desktop detectará se precisa de token ou login no navegador.',
+    remoteSetupDesc:
+      'Digite a URL do seu gateway. O Hermes Desktop detectará se precisa de token ou login no navegador.',
     remoteUrlTitle: 'URL do gateway',
     remoteUrlDesc: 'Use a URL base do gateway do Hermes, incluindo https:// quando remoto.',
     remoteUrlPlaceholder: 'https://gateway.example.com/hermes',
     probing: 'Detectando autenticação do gateway...',
-    probeError: "O Hermes não consegue acessar esse endereço. Verifique a URL e se o outro computador está rodando o Hermes — as opções de login aparecem assim que ele responder.",
+    probeError:
+      'O Hermes não consegue acessar esse endereço. Verifique a URL e se o outro computador está rodando o Hermes — as opções de login aparecem assim que ele responder.',
     probeErrorDetails: 'Detalhes',
     identityProvider: 'seu provedor de identidade',
     authTitle: 'Autenticação',
@@ -3410,15 +3469,16 @@ export const pt: Translations = {
   },
 
   onboarding: {
-    headerTitle: "Vamos configurar você com o Hermes Agent",
+    headerTitle: 'Vamos configurar você com o Hermes Agent',
     headerDesc: 'Conecte um provedor de modelo para começar a conversar. A maioria das opções leva um clique.',
-    preparingInstall: 'O Hermes está terminando a instalação. Isso normalmente leva menos de um minuto na primeira execução.',
+    preparingInstall:
+      'O Hermes está terminando a instalação. Isso normalmente leva menos de um minuto na primeira execução.',
     starting: 'Iniciando o Hermes…',
     lookingUpProviders: 'Procurando provedores...',
     collapse: 'Recolher',
     otherProviders: 'Outros provedores',
     haveApiKey: 'Tenho uma chave de API',
-    chooseLater: "Escolho um provedor depois",
+    chooseLater: 'Escolho um provedor depois',
     recommended: 'Recomendado',
     connected: 'Conectado',
     featuredPitch: 'Uma assinatura, mais de 300 modelos de ponta — a forma recomendada de usar o Hermes',
@@ -3440,7 +3500,8 @@ export const pt: Translations = {
       xai: { short: 'modelos Grok', description: 'Acesso direto aos modelos Grok da xAI.' },
       local: {
         short: 'auto-hospedado',
-        description: 'Aponte o Hermes para um endpoint local ou auto-hospedado compatível com OpenAI (vLLM, llama.cpp, Ollama, etc).'
+        description:
+          'Aponte o Hermes para um endpoint local ou auto-hospedado compatível com OpenAI (vLLM, llama.cpp, Ollama, etc).'
       }
     },
     backToSignIn: 'Voltar ao login',
@@ -3481,7 +3542,7 @@ export const pt: Translations = {
     waitingAuthorize: 'Aguardando você autorizar...',
     externalPending: provider =>
       `${provider} faz login pela própria CLI. Execute este comando em um terminal e volte e escolha "Já entrei":`,
-    signedIn: "Já entrei",
+    signedIn: 'Já entrei',
     deviceCodeOpened: provider => `Abrimos ${provider} no seu navegador. Digite este código lá:`,
     reopenVerification: 'Reabrir página de verificação',
     copy: 'Copiar',
@@ -3527,35 +3588,37 @@ export const pt: Translations = {
     notNow: 'Agora não',
     tryAgain: 'Tentar novamente',
     startAgain: 'Começar de novo',
-    didNotComplete: "O login não terminou",
-    rejectedBody: "Sem problema, você continua no serviço gratuito da Nous. Entre quando estiver pronto.",
+    didNotComplete: 'O login não terminou',
+    rejectedBody: 'Sem problema, você continua no serviço gratuito da Nous. Entre quando estiver pronto.',
     supersededBody: 'Um código de login mais novo substituiu este. Use o mais novo, ou comece de novo.',
     timedOutHeading: 'Esse link de login expirou',
-    timedOutBody: "Comece de novo quando estiver pronto. Você continua no serviço gratuito da Nous.",
+    timedOutBody: 'Comece de novo quando estiver pronto. Você continua no serviço gratuito da Nous.',
     retiredBody:
       'Sua sessão terminou antes de o login concluir. O Hermes iniciará uma nova; entre novamente quando estiver pronto.',
-    errorBody: "O login não terminou. Tente novamente quando estiver pronto.",
+    errorBody: 'O login não terminou. Tente novamente quando estiver pronto.',
     busyHeading: 'Quase lá',
     busyBody: wait =>
       `O Hermes não conseguiu concluir seu login porque o serviço da Nous está ocupado. Tente novamente em ${wait}. Sua sessão continua aqui enquanto isso.`,
     unreachableBody:
-      "O Hermes não conseguiu acessar o serviço da Nous para concluir seu login. Verifique sua conexão e tente novamente. Sua sessão continua aqui.",
+      'O Hermes não conseguiu acessar o serviço da Nous para concluir seu login. Verifique sua conexão e tente novamente. Sua sessão continua aqui.',
     alreadySignedInHeading: 'Já está conectado.',
     alreadySignedInBody: 'Este Hermes já está conectado a uma conta Nous.',
     setupFailed: {
       gateClosed:
-        "Esta versão do Hermes não pode iniciar sem uma conta Nous. Entre ou crie uma, é grátis e leva só um minuto.",
+        'Esta versão do Hermes não pode iniciar sem uma conta Nous. Entre ou crie uma, é grátis e leva só um minuto.',
       paused:
         'Usar o Hermes sem entrar está pausado por um momento. O Hermes continuará verificando. Entrar é grátis e já te coloca em movimento.',
       rateLimited: wait =>
         `Muita gente está começando agora, então o Hermes tentará novamente em ${wait}. Entrar é grátis e pula a espera.`,
       unreachable:
-        "O Hermes não conseguiu acessar o serviço da Nous. Verifique sua conexão e toque em Tentar novamente. Ou conecte outro provedor por enquanto.",
-      serverError: 'O serviço da Nous teve um soluço. Toque em Tentar novamente em instantes, ou conecte outro provedor por enquanto.',
+        'O Hermes não conseguiu acessar o serviço da Nous. Verifique sua conexão e toque em Tentar novamente. Ou conecte outro provedor por enquanto.',
+      serverError:
+        'O serviço da Nous teve um soluço. Toque em Tentar novamente em instantes, ou conecte outro provedor por enquanto.',
       powRequired:
-        "O servidor da Nous pediu uma prova de trabalho, mas isso ainda não está implementado no seu Agent. Entre ou crie uma conta Nous gratuita para continuar.",
-      locked: "Esta sessão não pode continuar sem entrar. Entre ou crie uma conta Nous gratuita para continuar.",
-      generic: "O Hermes não conseguiu configurar o acesso gratuito sem entrar. Entrar é grátis, ou conecte outro provedor.",
+        'O servidor da Nous pediu uma prova de trabalho, mas isso ainda não está implementado no seu Agent. Entre ou crie uma conta Nous gratuita para continuar.',
+      locked: 'Esta sessão não pode continuar sem entrar. Entre ou crie uma conta Nous gratuita para continuar.',
+      generic:
+        'O Hermes não conseguiu configurar o acesso gratuito sem entrar. Entrar é grátis, ou conecte outro provedor.',
       signInBelow: 'Entrar é grátis. Escolha a Nous abaixo.',
       tryAgain: 'Tentar novamente',
       retrying: 'Tentando de novo…'
@@ -3688,7 +3751,8 @@ export const pt: Translations = {
       toggleVersion: 'Versão e atualizações',
       toggleFreeTier: 'Nível gratuito',
       toggleWorkspace: 'Espaço de trabalho',
-      cacheHitRateTitle: 'Taxa de acerto de cache de prompt nesta sessão — tokens em cache custam menos, então quanto maior, mais barato',
+      cacheHitRateTitle:
+        'Taxa de acerto de cache de prompt nesta sessão — tokens em cache custam menos, então quanto maior, mais barato',
       tokensPerSecondTitle: 'Tokens de saída por segundo, média das últimas 10 chamadas de modelo',
       agents: 'Agentes',
       closeAgents: 'Fechar agentes',
@@ -3833,7 +3897,8 @@ export const pt: Translations = {
       empty: 'Nenhuma mensagem de console ainda.',
       promptHeader: 'Console de prévia:',
       sentTitle: 'Enviado ao chat',
-      sentMessage: count => `${count} ${count === 1 ? 'entrada de log adicionada' : 'entradas de log adicionadas'} ao composer`
+      sentMessage: count =>
+        `${count} ${count === 1 ? 'entrada de log adicionada' : 'entradas de log adicionadas'} ao composer`
     },
     web: {
       appFailedToBoot: 'O app de prévia falhou ao iniciar',
@@ -3846,7 +3911,8 @@ export const pt: Translations = {
       askRestart: 'Pedir ao Hermes para reiniciar o servidor',
       lookingRestart: taskId => `O Hermes está procurando um servidor de prévia para reiniciar (${taskId})`,
       restartingTitle: 'Reiniciando servidor de prévia',
-      restartingMessage: 'O Hermes está trabalhando em segundo plano. Acompanhe o console de prévia para ver o progresso.',
+      restartingMessage:
+        'O Hermes está trabalhando em segundo plano. Acompanhe o console de prévia para ver o progresso.',
       startRestartFailed: message => `Não foi possível iniciar a reinicialização do servidor: ${message}`,
       restartFailed: 'Falha ao reiniciar o servidor',
       hideConsole: 'Ocultar console de prévia',
@@ -3859,7 +3925,8 @@ export const pt: Translations = {
       address: 'Endereço',
       addressPlaceholder: 'Digite o endereço',
       blankPageBody: 'Digite um endereço acima para navegar, ou peça ao Hermes para abrir uma página.',
-      finishedRestarting: message => `O Hermes terminou de reiniciar o servidor de prévia${message ? `: ${message}` : ''}`,
+      finishedRestarting: message =>
+        `O Hermes terminou de reiniciar o servidor de prévia${message ? `: ${message}` : ''}`,
       failedRestarting: message => `Falha ao reiniciar o servidor: ${message}`,
       unknownError: 'erro desconhecido',
       restartedTitle: 'Servidor de prévia reiniciado',
@@ -3897,7 +3964,8 @@ export const pt: Translations = {
     showStripTab: title => `Mostrar ${title}`,
     hideStripTab: title => `Ocultar ${title}`,
     lastTabKeptTitle: 'A última aba permanece',
-    lastTabKeptBody: 'Esta zona precisa de pelo menos uma aba visível. Mostre outra aba primeiro, ou recolha a barra lateral inteira.',
+    lastTabKeptBody:
+      'Esta zona precisa de pelo menos uma aba visível. Mostre outra aba primeiro, ou recolha a barra lateral inteira.',
     toggleStripTab: title => `Alternar aba ${title}`,
     minimize: 'Minimizar',
     restore: 'Restaurar',
@@ -3925,7 +3993,8 @@ export const pt: Translations = {
     deletePreset: name => `Excluir ${name}`,
     zoneEditorTitle: 'Editor de zonas',
     editorHintPre: 'clique para dividir · ',
-    editorHintPost: ' inverte a linha · arraste entre zonas para mesclar · arraste bordas compartilhadas para redimensionar',
+    editorHintPost:
+      ' inverte a linha · arraste entre zonas para mesclar · arraste bordas compartilhadas para redimensionar',
     templateColumns: 'Colunas',
     templateRows: 'Linhas',
     templateGrid: 'Grade',
@@ -3992,28 +4061,35 @@ export const pt: Translations = {
         auth: 'Problema de login',
         billing: 'Sem créditos',
         disk: 'Disco cheio',
-        endpoint: "Não é possível acessar seu servidor de modelo",
+        endpoint: 'Não é possível acessar seu servidor de modelo',
         gateway: 'O Hermes encontrou um problema',
-        generic: "O Hermes não conseguiu terminar esta resposta",
+        generic: 'O Hermes não conseguiu terminar esta resposta',
         provider: 'O serviço de IA retornou um erro',
         runtime: 'O Hermes encontrou um problema',
         streaming: 'A resposta foi interrompida'
       },
       errorLayerBodies: {
         auth: 'O serviço de IA rejeitou seu login. Verifique as credenciais deste provedor e envie sua mensagem novamente.',
-        billing: 'Sua conta não tem mais créditos para este provedor. Recarregue ou troque de provedor e envie novamente.',
+        billing:
+          'Sua conta não tem mais créditos para este provedor. Recarregue ou troque de provedor e envie novamente.',
         disk: 'Seu disco está cheio, então o Hermes não conseguiu salvar esta conversa. Libere espaço e tente novamente.',
-        endpoint: "O Hermes não consegue acessar seu servidor de modelo personalizado. Verifique se ele está rodando e envie sua mensagem novamente.",
-        gateway: 'O Hermes encontrou um problema interno ao iniciar esta resposta. Envie sua mensagem novamente; se continuar, envie diagnósticos.',
-        generic: 'Algo deu errado enquanto o Hermes respondia. Tente novamente, ou copie os detalhes se continuar acontecendo.',
-        provider: 'O serviço de IA não conseguiu concluir esta solicitação. Tente novamente em instantes ou troque de provedor.',
-        runtime: 'O Hermes encontrou um problema interno ao iniciar esta resposta. Envie sua mensagem novamente; se continuar, envie diagnósticos.',
+        endpoint:
+          'O Hermes não consegue acessar seu servidor de modelo personalizado. Verifique se ele está rodando e envie sua mensagem novamente.',
+        gateway:
+          'O Hermes encontrou um problema interno ao iniciar esta resposta. Envie sua mensagem novamente; se continuar, envie diagnósticos.',
+        generic:
+          'Algo deu errado enquanto o Hermes respondia. Tente novamente, ou copie os detalhes se continuar acontecendo.',
+        provider:
+          'O serviço de IA não conseguiu concluir esta solicitação. Tente novamente em instantes ou troque de provedor.',
+        runtime:
+          'O Hermes encontrou um problema interno ao iniciar esta resposta. Envie sua mensagem novamente; se continuar, envie diagnósticos.',
         streaming: 'A conexão caiu antes de a resposta terminar. Tente novamente para enviá-la de novo.'
       },
       errorCodes: {
         auth: {
           title: provider => `${provider} rejeitou seu login`,
-          body: provider => `As credenciais salvas para ${provider} não foram aceitas. Corrija-as em Configurações ou troque de provedor e envie sua mensagem novamente.`
+          body: provider =>
+            `As credenciais salvas para ${provider} não foram aceitas. Corrija-as em Configurações ou troque de provedor e envie sua mensagem novamente.`
         },
         auth_permanent: {
           title: provider => `${provider} rejeitou seu login`,
@@ -4022,7 +4098,8 @@ export const pt: Translations = {
         },
         billing: {
           title: 'Sem créditos',
-          body: provider => `Sua conta ${provider} não tem mais créditos. Recarregue ou troque de provedor e envie novamente.`
+          body: provider =>
+            `Sua conta ${provider} não tem mais créditos. Recarregue ou troque de provedor e envie novamente.`
         },
         rate_limit: {
           title: 'O serviço de IA está ocupado',
@@ -4038,7 +4115,8 @@ export const pt: Translations = {
         },
         server_error: {
           title: 'O serviço de IA teve um problema',
-          body: provider => `${provider} retornou um erro de servidor. Tente novamente em instantes ou troque de provedor.`
+          body: provider =>
+            `${provider} retornou um erro de servidor. Tente novamente em instantes ou troque de provedor.`
         },
         timeout: {
           title: 'A resposta expirou',
@@ -4063,7 +4141,8 @@ export const pt: Translations = {
         },
         model_not_found: {
           title: 'Este modelo não está disponível',
-          body: provider => `${provider} não oferece este modelo na sua conta. Escolha outro modelo e envie sua mensagem novamente.`
+          body: provider =>
+            `${provider} não oferece este modelo na sua conta. Escolha outro modelo e envie sua mensagem novamente.`
         },
         provider_policy_blocked: {
           title: 'Este modelo está bloqueado pelas configurações da sua conta',
@@ -4107,30 +4186,30 @@ export const pt: Translations = {
         // e o caminho a seguir); estes corpos substituem um backend mais antigo que não enviou nenhum.
         free_tier_disabled: {
           title: 'Usar o Hermes sem entrar está desligado agora',
-          body: "Entre com uma conta Nous para continuar conversando, é grátis."
+          body: 'Entre com uma conta Nous para continuar conversando, é grátis.'
         },
         free_tier_rate_limited: {
-          title: "Você esgotou a cota para conversar sem entrar",
-          body: "Ela renova em breve. Entre com uma conta Nous para uma cota maior, é grátis."
+          title: 'Você esgotou a cota para conversar sem entrar',
+          body: 'Ela renova em breve. Entre com uma conta Nous para uma cota maior, é grátis.'
         },
         free_tier_at_capacity: {
           title: 'Conversar sem entrar está muito ocupado agora',
-          body: "Entre para pular a fila, é grátis, ou tente novamente em instantes."
+          body: 'Entre para pular a fila, é grátis, ou tente novamente em instantes.'
         },
         free_tier_model_not_free: {
-          title: "Esse modelo não está disponível sem entrar",
-          body: "O Hermes usa o modelo gratuito por enquanto. Entre com uma conta Nous para mais modelos, é grátis."
+          title: 'Esse modelo não está disponível sem entrar',
+          body: 'O Hermes usa o modelo gratuito por enquanto. Entre com uma conta Nous para mais modelos, é grátis.'
         },
         free_tier_route: {
-          title: "O Hermes não conseguiu acessar o modelo gratuito nesta rota",
-          body: "Entre com uma conta Nous, é grátis, ou verifique a configuração NOUS_INFERENCE_BASE_URL."
+          title: 'O Hermes não conseguiu acessar o modelo gratuito nesta rota',
+          body: 'Entre com uma conta Nous, é grátis, ou verifique a configuração NOUS_INFERENCE_BASE_URL.'
         },
         free_tier_outage: {
           title: 'O modelo gratuito está com dificuldade para responder agora',
           body: 'Tente enviar sua mensagem novamente em um minuto.'
         },
         free_tier_refused: {
-          title: "O Hermes não conseguiu enviar isso sem entrar",
+          title: 'O Hermes não conseguiu enviar isso sem entrar',
           body: 'Entrar com uma conta Nous é grátis.'
         }
       },
@@ -4145,7 +4224,7 @@ export const pt: Translations = {
       },
       errorDetails: 'Detalhes',
       errorGenericProvider: 'O serviço de IA',
-      errorToastTitle: "O Hermes não conseguiu terminar a resposta",
+      errorToastTitle: 'O Hermes não conseguiu terminar a resposta',
       errorRetry: 'Tentar novamente',
       errorStartNewSession: 'Iniciar nova sessão',
       errorSwitchProvider: 'Trocar provedor',
@@ -4178,8 +4257,7 @@ export const pt: Translations = {
       restoreCheckpoint: 'Restaurar checkpoint',
       restoreFromHere: 'Restaurar checkpoint — reexecutar a partir deste prompt',
       restoreTitle: 'Restaurar para este checkpoint?',
-      restoreBody:
-        'Tudo após este prompt é removido da conversa, e o prompt executa novamente a partir daqui.',
+      restoreBody: 'Tudo após este prompt é removido da conversa, e o prompt executa novamente a partir daqui.',
       restoreConfirm: 'Restaurar e reexecutar',
       restoreNext: 'Restaurar próximo checkpoint',
       goForward: 'Avançar',
@@ -4221,7 +4299,8 @@ export const pt: Translations = {
       questionProgress: (answered, total) => `${answered} de ${total} respondidas`,
       lateAnswer: (question, choice) => `Re: "${question}" — minha resposta: ${choice}`,
       lateAnswerTip: 'Rascunhe esta resposta como mensagem de continuação',
-      lateAnswerHint: 'Este prompt não está mais aguardando. Escolha uma opção para rascunhá-lo como mensagem de continuação.'
+      lateAnswerHint:
+        'Este prompt não está mais aguardando. Escolha uma opção para rascunhá-lo como mensagem de continuação.'
     },
     mcpSetup: {
       installTitle: 'Adicionar servidores MCP',
@@ -4252,7 +4331,8 @@ export const pt: Translations = {
       copyQuery: 'Copiar consulta',
       copyFile: 'Copiar arquivo',
       copyPath: 'Copiar caminho',
-      failedCalls: (count: number) => `${count} ${count === 1 ? 'chamada de ferramenta falhou' : 'chamadas de ferramenta falharam'}`,
+      failedCalls: (count: number) =>
+        `${count} ${count === 1 ? 'chamada de ferramenta falhou' : 'chamadas de ferramenta falharam'}`,
       skillActivity: {
         loading: 'Carregando skill',
         loaded: 'Skill carregada',
@@ -4304,8 +4384,16 @@ export const pt: Translations = {
         runningTool: action => `Executando ${action.toLowerCase()}`
       },
       titles: {
-        browser_click: { done: 'Clicou em elemento da página', pending: 'Clicando em elemento da página', pendingAction: 'Clicando' },
-        browser_fill: { done: 'Preencheu campo do formulário', pending: 'Preenchendo campo do formulário', pendingAction: 'Preenchendo' },
+        browser_click: {
+          done: 'Clicou em elemento da página',
+          pending: 'Clicando em elemento da página',
+          pendingAction: 'Clicando'
+        },
+        browser_fill: {
+          done: 'Preencheu campo do formulário',
+          pending: 'Preenchendo campo do formulário',
+          pendingAction: 'Preenchendo'
+        },
         browser_navigate: { done: 'Abriu página', pending: 'Abrindo página', pendingAction: 'Abrindo' },
         browser_snapshot: {
           done: 'Capturou snapshot da página',
@@ -4325,7 +4413,11 @@ export const pt: Translations = {
         image_generate: { done: 'Gerou imagem', pending: 'Gerando imagem', pendingAction: 'Gerando' },
         list_files: { done: 'Listou arquivos', pending: 'Listando arquivos', pendingAction: 'Listando' },
         memory: { done: 'Salvou na memória', pending: 'Salvando na memória', pendingAction: 'Salvando' },
-        patch: { done: 'Aplicou patch no arquivo', pending: 'Aplicando patch no arquivo', pendingAction: 'Aplicando patch' },
+        patch: {
+          done: 'Aplicou patch no arquivo',
+          pending: 'Aplicando patch no arquivo',
+          pendingAction: 'Aplicando patch'
+        },
         read_file: { done: 'Leu arquivo', pending: 'Lendo arquivo', pendingAction: 'Lendo' },
         search_files: { done: 'Buscou arquivos', pending: 'Buscando arquivos', pendingAction: 'Buscando' },
         session_search_recall: {
@@ -4349,7 +4441,8 @@ export const pt: Translations = {
     sudoSendFailed: 'Não foi possível enviar a senha sudo',
     secretSendFailed: 'Não foi possível enviar o segredo',
     sudoTitle: 'Senha de administrador',
-    sudoDesc: 'Revise o comando antes de digitar sua senha sudo. Sua senha é enviada ao agente que o executa e fica em cache nesta sessão.',
+    sudoDesc:
+      'Revise o comando antes de digitar sua senha sudo. Sua senha é enviada ao agente que o executa e fica em cache nesta sessão.',
     sudoCommandUnavailable: 'Este agente não forneceu o comando. Cancele se não puder verificá-lo na conversa.',
     sudoPlaceholder: 'senha sudo',
     secretTitle: 'Segredo necessário',
@@ -4370,7 +4463,7 @@ export const pt: Translations = {
     vaultSaveIdentifierPlaceholder: 'voce@example.com',
     vaultSavePasswordPlaceholder: 'Senha',
     vaultSaveFootnote: 'Gerencie logins salvos em Configurações → Senhas e Logins.',
-    vaultSaveDecline: "Não salvar",
+    vaultSaveDecline: 'Não salvar',
     vaultSaveConfirm: 'Salvar e entrar',
     vaultCodeSendFailed: 'Não foi possível enviar o código',
     vaultCodeTitle: site => `Código de verificação para ${site}`,
@@ -4414,11 +4507,11 @@ export const pt: Translations = {
     readOnlyTranscriptBody:
       'Nenhum backend conectado reivindica este chat antigo ainda, então ele abriu como transcrição somente leitura. O histórico está intacto; o envio fica desativado até um backend reivindicá-lo.',
     readOnlyTranscriptSendBlocked: 'Este chat está aberto como transcrição somente leitura — o envio está desativado.',
-    resumeStrandedTitle: "Não foi possível carregar esta sessão",
+    resumeStrandedTitle: 'Não foi possível carregar esta sessão',
     resumeStrandedBody:
       'A conexão com esta sessão falhou e as tentativas automáticas desistiram. Verifique se o gateway está rodando e tente novamente.',
     poolSlotTimeoutBody:
-      "Muitos bots estão rodando de uma vez para o limite deste computador. Aumente o limite em Configurações → Avançado, ou espere um terminar e tente novamente.",
+      'Muitos bots estão rodando de uma vez para o limite deste computador. Aumente o limite em Configurações → Avançado, ou espere um terminar e tente novamente.',
     poolSlotTimeoutOpenSettings: 'Abrir Configurações avançadas',
     resumeRetry: 'Tentar novamente',
     nothingToBranch: 'Nada para ramificar',
@@ -4462,13 +4555,14 @@ export const pt: Translations = {
       success: platform => `Transferido para ${platform}. Retome aqui a qualquer momento.`,
       systemNote: platform => `↻ Transferido para ${platform} — retome aqui a qualquer momento.`,
       failed: error => `Falha na transferência: ${error}`,
-      timedOut: "O Hermes não conseguiu acessar sua conexão de mensagens. Inicie-a em Configurações → Mensagens e tente a transferência novamente.",
+      timedOut:
+        'O Hermes não conseguiu acessar sua conexão de mensagens. Inicie-a em Configurações → Mensagens e tente a transferência novamente.',
       startMessaging: 'Iniciar mensagens'
     }
   },
 
   tips: {
-    close: "Não mostrar esta dica novamente",
+    close: 'Não mostrar esta dica novamente',
     items: {
       'new-session': {
         title: 'Comece do zero',

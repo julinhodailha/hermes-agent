@@ -8,8 +8,8 @@ import { useSessionView } from '@/app/chat/session-view'
 import { AGENTS_ROUTE } from '@/app/routes'
 import type { SubmitTextOptions } from '@/app/session/hooks/use-prompt-actions/utils'
 import { BillingBanner } from '@/components/billing-banner'
-import { type ResizeDirection, useFloatingPanel } from '@/components/chat/use-floating-panel'
 import { StatusSection } from '@/components/chat/status-section'
+import { type ResizeDirection, useFloatingPanel } from '@/components/chat/use-floating-panel'
 import { FreeTierNoticeStrip, useFreeTierNoticeOwner } from '@/components/free-tier/notice-strip'
 import { usePaneVisible } from '@/components/pane-shell/pane-visibility'
 import { Button } from '@/components/ui/button'
@@ -380,6 +380,7 @@ export function ComposerStatusStack({ onSubmit, queue, sessionId }: ComposerStat
         ] as Array<[ResizeDirection, string]>
       ).map(([dir, cls]) => {
         const r = floating.resize(dir)
+
         return (
           <div
             className={cls}

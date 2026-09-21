@@ -28,11 +28,18 @@ const MIN_H = 100
  * value. Silently ignores corrupted entries.
  */
 function readPersisted(key: string | undefined, fallback: FloatingPanelRect): FloatingPanelRect {
-  if (!key || typeof window === 'undefined') return fallback
+  if (!key || typeof window === 'undefined') {
+    return fallback
+  }
+
   try {
     const raw = window.localStorage.getItem(key)
-    if (!raw) return fallback
+
+    if (!raw) {
+      return fallback
+    }
     const parsed = JSON.parse(raw)
+
     if (
       typeof parsed === 'object' &&
       parsed !== null &&
@@ -46,11 +53,15 @@ function readPersisted(key: string | undefined, fallback: FloatingPanelRect): Fl
   } catch {
     // corrupted entry — ignore
   }
+
   return fallback
 }
 
 function writePersisted(key: string | undefined, rect: FloatingPanelRect): void {
-  if (!key || typeof window === 'undefined') return
+  if (!key || typeof window === 'undefined') {
+    return
+  }
+
   try {
     window.localStorage.setItem(key, JSON.stringify(rect))
   } catch {
@@ -93,14 +104,18 @@ export function useFloatingPanel(initial: FloatingPanelRect, persistKey?: string
         h: clamp(prev.h, MIN_H, Math.max(MIN_H, window.innerHeight - 16))
       }))
     }
+
     window.addEventListener('resize', onResize)
+
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
   const drag = {
     start: useCallback(
       (event: ReactPointerEvent<HTMLElement>) => {
-        if (event.button !== 0) return
+        if (event.button !== 0) {
+          return
+        }
         dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, rect }
         event.currentTarget.setPointerCapture(event.pointerId)
       },
@@ -108,7 +123,10 @@ export function useFloatingPanel(initial: FloatingPanelRect, persistKey?: string
     ),
     move: useCallback((event: ReactPointerEvent<HTMLElement>) => {
       const state = dragRef.current
-      if (!state || event.pointerId !== state.pointerId) return
+
+      if (!state || event.pointerId !== state.pointerId) {
+        return
+      }
       const nx = state.rect.x + (event.clientX - state.startX)
       const ny = state.rect.y + (event.clientY - state.startY)
       setRect(prev => ({
@@ -118,50 +136,65 @@ export function useFloatingPanel(initial: FloatingPanelRect, persistKey?: string
       }))
     }, []),
     end: useCallback((event: ReactPointerEvent<HTMLElement>) => {
-      if (dragRef.current?.pointerId === event.pointerId) dragRef.current = null
+      if (dragRef.current?.pointerId === event.pointerId) {
+        dragRef.current = null
+      }
     }, [])
   }
 
   // Memoize the per-direction handlers map so consumers don't re-render on every
   // rect change — only when the rect itself actually moves.
   const resize = useMemo(
-    () =>
-      (dir: ResizeDirection) => ({
-        start: (event: ReactPointerEvent<HTMLElement>) => {
-          if (event.button !== 0) return
-          event.stopPropagation()
-          resizeRef.current = { dir, pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, rect }
-          event.currentTarget.setPointerCapture(event.pointerId)
-        },
-        move: (event: ReactPointerEvent<HTMLElement>) => {
-          const state = resizeRef.current
-          if (!state || event.pointerId !== state.pointerId) return
-          const dx = event.clientX - state.startX
-          const dy = event.clientY - state.startY
-          const { x, y, w, h } = state.rect
-
-          let nx = x
-          let ny = y
-          let nw = w
-          let nh = h
-
-          if (dir.includes('e')) nw = clamp(w + dx, MIN_W, window.innerWidth - x - 8)
-          if (dir.includes('s')) nh = clamp(h + dy, MIN_H, window.innerHeight - y - 8)
-          if (dir.includes('w')) {
-            nw = clamp(w - dx, MIN_W, x + w - 8)
-            nx = x + w - nw
-          }
-          if (dir.includes('n')) {
-            nh = clamp(h - dy, MIN_H, y + h - 8)
-            ny = y + h - nh
-          }
-
-          setRect({ x: nx, y: ny, w: nw, h: nh })
-        },
-        end: (event: ReactPointerEvent<HTMLElement>) => {
-          if (resizeRef.current?.pointerId === event.pointerId) resizeRef.current = null
+    () => (dir: ResizeDirection) => ({
+      start: (event: ReactPointerEvent<HTMLElement>) => {
+        if (event.button !== 0) {
+          return
         }
-      }),
+        event.stopPropagation()
+        resizeRef.current = { dir, pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, rect }
+        event.currentTarget.setPointerCapture(event.pointerId)
+      },
+      move: (event: ReactPointerEvent<HTMLElement>) => {
+        const state = resizeRef.current
+
+        if (!state || event.pointerId !== state.pointerId) {
+          return
+        }
+        const dx = event.clientX - state.startX
+        const dy = event.clientY - state.startY
+        const { x, y, w, h } = state.rect
+
+        let nx = x
+        let ny = y
+        let nw = w
+        let nh = h
+
+        if (dir.includes('e')) {
+          nw = clamp(w + dx, MIN_W, window.innerWidth - x - 8)
+        }
+
+        if (dir.includes('s')) {
+          nh = clamp(h + dy, MIN_H, window.innerHeight - y - 8)
+        }
+
+        if (dir.includes('w')) {
+          nw = clamp(w - dx, MIN_W, x + w - 8)
+          nx = x + w - nw
+        }
+
+        if (dir.includes('n')) {
+          nh = clamp(h - dy, MIN_H, y + h - 8)
+          ny = y + h - nh
+        }
+
+        setRect({ x: nx, y: ny, w: nw, h: nh })
+      },
+      end: (event: ReactPointerEvent<HTMLElement>) => {
+        if (resizeRef.current?.pointerId === event.pointerId) {
+          resizeRef.current = null
+        }
+      }
+    }),
     [rect]
   )
 
