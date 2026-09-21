@@ -78,7 +78,7 @@ export function SubagentSection({ sessionId }: SubagentSectionProps) {
         icon={<Codicon className="text-(--ui-purple)" name="agent" size="0.8rem" />}
         label={t.statusStack.subagents(live.length)}
       >
-        <div className="max-h-[25vh] overflow-y-auto overscroll-y-auto">{live.map(row)}</div>
+        <div className="grid max-h-[25vh] grid-cols-3 gap-1.5 overflow-y-auto overscroll-y-auto">{live.map(row)}</div>
         {detail && (
           <div
             className="status-subagent-detail max-h-[25vh] overflow-y-auto overscroll-y-auto pr-3 py-2"

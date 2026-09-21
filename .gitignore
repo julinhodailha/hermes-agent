@@ -86,6 +86,10 @@ hermes_cli/web_dist/
 .web_ui_build.lock
 apps/desktop/build/
 apps/desktop/dist/
+# Vite build output that lands at the repo root (e.g. killed build,
+# hash-prefixed chunks). Already deleted if present; keep ignored going forward.
+apps/desktop/index-*.js
+apps/desktop/index-*.js.map
 
 # tsc-emitted artifacts (a stray `tsc -b` compiles into src/, and vite then
 # resolves the stale .js OVER the .tsx — never track these)

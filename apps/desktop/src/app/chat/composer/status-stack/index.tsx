@@ -8,7 +8,7 @@ import { useSessionView } from '@/app/chat/session-view'
 import { AGENTS_ROUTE } from '@/app/routes'
 import type { SubmitTextOptions } from '@/app/session/hooks/use-prompt-actions/utils'
 import { BillingBanner } from '@/components/billing-banner'
-import { composerDockCard } from '@/components/chat/composer-dock'
+import { type ResizeDirection, useFloatingPanel } from '@/components/chat/use-floating-panel'
 import { StatusSection } from '@/components/chat/status-section'
 import { FreeTierNoticeStrip, useFreeTierNoticeOwner } from '@/components/free-tier/notice-strip'
 import { usePaneVisible } from '@/components/pane-shell/pane-visibility'
@@ -165,6 +165,10 @@ export function ComposerStatusStack({ onSubmit, queue, sessionId }: ComposerStat
   // store) and resume it on reveal via `paneVisible` in the dep array.
   const paneVisible = usePaneVisible()
 
+  // Floating + resizable + closable: the whole status stack is a free panel the
+  // user can drag, resize (bottom-right corner) and close (reopen chip below).
+  const floating = useFloatingPanel({ x: 16, y: 120, w: 380, h: 320 })
+
   useEffect(() => {
     if (!sessionId || !hasRunningBackground || !paneVisible) {
       return
@@ -303,47 +307,91 @@ export function ComposerStatusStack({ onSubmit, queue, sessionId }: ComposerStat
     return null
   }
 
+  if (floating.closed) {
+    return (
+      <button
+        className="fixed bottom-3 left-3 z-40 flex items-center gap-1.5 rounded-full border border-border bg-popover px-2.5 py-1 text-[0.65rem] text-muted-foreground shadow-sm hover:text-foreground"
+        data-slot="status-stack-reopen"
+        onClick={floating.show}
+        type="button"
+      >
+        <Codicon name="agent" size="0.75rem" />
+        status
+      </button>
+    )
+  }
+
   return (
     <div
-      // In flow in the dock column, directly above the composer. The dock is
-      // bottom-anchored, so this grows upward over the thread without needing
-      // to be positioned — and it shares the dock's left edge for free.
-      className="flex max-h-[40vh] min-h-0 flex-col overflow-hidden"
+      className="fixed z-40 flex max-h-[50vh] flex-col overflow-hidden rounded-xl border border-border bg-popover shadow-lg"
       data-slot="composer-status-stack"
       onPointerDownCapture={() => blurComposerInput()}
+      style={{ ...floating.style, maxWidth: 560 }}
     >
-      {/* The card paints the shared --composer-fill (rest / scrolled / focused
-          all match the composer surface by construction); on scroll we only
-          ghost the CONTENT — element opacity on the card would kill the blur.
-          Rounded top, square bottom; the bottom border is TRANSPARENT — the
-          composer surface's visible top border (which sits at a higher z) is the
-          single shared seam, so the two read as one fused capsule. */}
-      {sections.length > 0 && (
+      {/* Drag handle + close. */}
+      <div
+        className="flex cursor-grab items-center gap-2 border-b border-border px-2.5 py-1 active:cursor-grabbing"
+        data-slot="status-stack-drag"
+        onPointerCancel={floating.drag.end}
+        onPointerDown={floating.drag.start}
+        onPointerMove={floating.drag.move}
+        onPointerUp={floating.drag.end}
+      >
+        <span className="flex-1 select-none text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground">
+          status
+        </span>
+        <button
+          aria-label="Fechar"
+          className="rounded p-0.5 text-muted-foreground/70 hover:bg-muted hover:text-foreground"
+          onClick={floating.close}
+          type="button"
+        >
+          <Codicon name="close" size="0.75rem" />
+        </button>
+      </div>
+
+      <div className="min-h-0 overflow-y-auto overscroll-y-contain" data-slot="status-stack-scroll">
         <div
           className={cn(
-            composerDockCard('top'),
-            // Inset (mx-2) so the stack reads slightly narrower than the composer
-            // surface below it — the original look.
-            'mx-2 flex min-h-0 max-h-[inherit] shrink flex-col overflow-hidden rounded-b-none border-b border-b-transparent'
+            'transition-opacity duration-200 ease-out',
+            scrolledUp ? 'opacity-30 group-hover/composer:opacity-100' : 'opacity-100'
           )}
+          data-slot="status-stack-content"
         >
-          <div className="min-h-0 overflow-y-auto overscroll-y-contain" data-slot="status-stack-scroll">
-            <div
-              className={cn(
-                'transition-opacity duration-200 ease-out',
-                scrolledUp ? 'opacity-30 group-hover/composer:opacity-100' : 'opacity-100'
-              )}
-              data-slot="status-stack-content"
-            >
-              {sections.map(section => (
-                <div data-slot="status-stack-section" key={section.key}>
-                  {section.node}
-                </div>
-              ))}
+          {sections.map(section => (
+            <div data-slot="status-stack-section" key={section.key}>
+              {section.node}
             </div>
-          </div>
+          ))}
         </div>
-      )}
+      </div>
+
+      {/* Resize handles — 4 edges + 4 corners. */}
+      {(
+        [
+          ['n', 'absolute left-1 right-1 top-0 h-1.5 cursor-ns-resize'],
+          ['s', 'absolute bottom-0 left-1 right-1 h-1.5 cursor-ns-resize'],
+          ['w', 'absolute bottom-1 left-0 top-1 w-1.5 cursor-ew-resize'],
+          ['e', 'absolute bottom-1 right-0 top-1 w-1.5 cursor-ew-resize'],
+          ['nw', 'absolute left-0 top-0 h-2.5 w-2.5 cursor-nwse-resize'],
+          ['ne', 'absolute right-0 top-0 h-2.5 w-2.5 cursor-nesw-resize'],
+          ['sw', 'absolute bottom-0 left-0 h-2.5 w-2.5 cursor-nesw-resize'],
+          ['se', 'absolute bottom-0 right-0 h-2.5 w-2.5 cursor-nwse-resize']
+        ] as Array<[ResizeDirection, string]>
+      ).map(([dir, cls]) => {
+        const r = floating.resize(dir)
+        return (
+          <div
+            className={cls}
+            data-slot={`status-stack-resize-${dir}`}
+            key={dir}
+            onPointerCancel={r.end}
+            onPointerDown={r.start}
+            onPointerMove={r.move}
+            onPointerUp={r.end}
+          />
+        )
+      })}
     </div>
   )
 }
